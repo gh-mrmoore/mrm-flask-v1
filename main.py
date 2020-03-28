@@ -1,6 +1,8 @@
 from flask import Flask, request, redirect, render_template, session, flash
 from flask_sqlalchemy import SQLAlchemy
 
+from flask.ext.heroku import Heroku
+
 app = Flask(__name__)
 #db = SQLAlchemy(app)
 
