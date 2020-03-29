@@ -6,13 +6,13 @@ from flask import Flask, request, redirect, render_template, url_for, flash, ses
 from flask_sqlalchemy import SQLAlchemy
 
 from datetime import datetime
-#from flask_heroku import Heroku
+from flask_heroku import Heroku
 
 template_dir = os.path.join(os.path.dirname(__file__), 'templates')
 jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir), autoescape=True)
 
 app = Flask(__name__)
-#heroku = Heroku(app)
+heroku = Heroku(app)
 #db = SQLAlchemy(app)
 
 
