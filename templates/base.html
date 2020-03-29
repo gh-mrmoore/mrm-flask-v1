@@ -4,16 +4,77 @@
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <title>Flask Development</title>
 </head>
 
 <body>
-    <h1>Python/Flask/PostGreSQL</h1>
-    <h2>
+    <header>
+        <h1>Python/Flask/PostGreSQL</h1>
+    </header>
+
+    <nav>
+        <h2>about me:</h2>
+
+        <ul class="fa-ul">
+            <li><span class="fa-li"><i class="fab fa-github"></i></span>
+                <a target="_blank" href="https://github.com/gh-mrmoore">GitHub</a></li>
+            <li><span class="fa-li"><i class="fab fa-linkedin"></i></span>
+                <a target="_blank" href="https://www.linkedin.com/in/matthew-moore-22712859/">LinkedIn</a></li>
+        </ul>
+        
+        <hr />
+        
+        <h3>heroku project links:</h3>
+        <ul class="fa-ul">
+            <li><span class="fa-li"><i class="fab fa-python"></i></span>
+                <a target="_blank" href="https://moore-family.herokuapp.com/" title="Family Planner, Log-In Required">Python/Django/PostGreSQL</a></li>
+            
+            <li><span class="fa-li"><i class="fab fa-python"></i></span>
+                <a target="_blank" href="https://rocky-hollows-50293.herokuapp.com/" title="Django with settings module for local or production">Python/Django</a></li>
+        
+            <li><span class="fa-li"><i class="fab fa-php"></i></span>
+                <a target="_blank" href="https://fathomless-hollows-45870.herokuapp.com/" title="Standard PHP programming - no framework">PHP</a></li>
+        
+            <li><span class="fa-li"><i class="fab fa-node-js"></i></span>
+                <a target="_blank" href="https://safe-brook-59578.herokuapp.com/" title="Node JS - in-progress">Node JS</a></li>
+        
+            <li><span class="fa-li"><i class="fab fa-java"></i></span>
+                <a target="_blank" href="https://protected-badlands-89031.herokuapp.com/" title="Java - Heroku-Generated, Modified by Me">Java</a></li>
+        </ul>    </nav>
+
+    <main>
         {% block content %}
         {% endblock %}
-    </h2>
+    </main>
+
+    <nav id='nav_useful'>
+        <h3>useful resources</h3>
+        <ul class="fa-ul">
+            <li><span class="fa-li"><i class="fab fa-font-awesome"></i></span>
+                <a target="_blank" href="https://fontawesome.com/">Font Awesome</a></li>
+    
+            <li><span class="fa-li"><i class="fas fa-images"></i></span>
+                <a target="_blank" href="https://www.pexels.com/">Pexels</a></li>
+    
+            <li><span class="fa-li"><i class="fas fa-code"></i></span>
+                <a target="_blank" href="https://www.w3schools.com/">w3schools</a></li>
+    
+            <li><span class="fa-li"><i class="fas fa-globe"></i></span>
+                <a target="_blank" href="https://www.heroku.com/">Heroku</a></li>
+    
+            <li><span class="fa-li"><i class="fab fa-stack-overflow"></i></span>
+                <a target="_blank" href="http://www.stackoverflow.com">Stack Overflow</a></li>
+                
+            <li><span class="fa-li"><i class="fab fa-hackerrank"></i></span>
+                <a target="_blank" href="http://www.hackerrank.com/">Hacker Rank</a></li>
+        </ul>    
+    </nav>
+
+    <footer>
+        <p>&copy; Matthew Moore 2020</p>
+    </footer>
+    
 </body>
 
 </html>
