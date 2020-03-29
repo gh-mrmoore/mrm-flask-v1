@@ -6,13 +6,13 @@ from flask import Flask, request, redirect, render_template, url_for, flash, ses
 from flask_sqlalchemy import SQLAlchemy
 
 from datetime import datetime
-from flask_heroku import Heroku
+#from flask_heroku import Heroku
 
 template_dir = os.path.join(os.path.dirname(__file__), 'templates')
 jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir), autoescape=True)
 
 app = Flask(__name__)
-heroku = Heroku(app)
+#heroku = Heroku(app)
 #db = SQLAlchemy(app)
 
 
@@ -23,7 +23,8 @@ app.secret_key = 'jpfsop0495nfuianrgp019283iuern0n87unrnub098346ounb'
 #create the main starting page for the application
 @app.route('/', methods=['POST', 'GET', 'PUT'])   #PUT method is used for updates from form data
 def index():
-    return render_template('index.html', title="A Little Project")
+    #return render_template('index.html', title="A Little Project")
+    return "Hello"
 
 #create a path for tasks that need to be completed
 @app.route('/tasks', methods=['GET'])
