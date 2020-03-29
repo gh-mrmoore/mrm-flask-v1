@@ -9,3 +9,4 @@ datetime
 psycopg2
 psycopg2-binary
 dj-database-url
+flask_heroku
