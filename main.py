@@ -1,39 +1,24 @@
 import os
 import jinja2
-import requests
 
+import requests
 from flask import Flask, request, redirect, render_template, url_for, flash, session
 from flask_sqlalchemy import SQLAlchemy
 
 from datetime import datetime
 from flask_heroku import Heroku
 
+template_dir = os.path.join(os.path.dirname(__file__), 'templates')
+jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir), autoescape=True)
+
 app = Flask(__name__)
 heroku = Heroku(app)
 #db = SQLAlchemy(app)
 
+
+#define any global-level variables that might be needed
 app.secret_key = 'jpfsop0495nfuianrgp019283iuern0n87unrnub098346ounb'
-"""
-#create the model(s) for the tasks we need to add
-class User(db.Model):
-    userID = db.Column(db.Integer, primary_key=True)
-    userEmail = db.Column(db.String(120))
-    userTasks = db.relationship('Task', backref='owner')
 
-    def __init__(self, usermail)
-    self.userEmail = userEmail
-
-class Task(db.Model):
-    taskID = db.Column(db.Integer, primary_key=True)
-    taskDescription = db.Column(db.String(120))
-    taskCompletion = db.Column(db.Boolean)
-    taskOwnerID = db.Column(db.Integer, db.ForeignKey('user.userID'))
-
-    def __init__(self, description, owner):
-        self.taskDescription = description
-        self.taskCompletion = False
-        self.taskOwnerID = owner
-"""
 
 #create the main starting page for the application
 @app.route('/', methods=['POST', 'GET', 'PUT'])   #PUT method is used for updates from form data
