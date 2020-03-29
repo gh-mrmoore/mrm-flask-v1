@@ -9,6 +9,7 @@ from datetime import datetime
 from flask_heroku import Heroku
 
 app = Flask(__name__)
+heroku = Heroku(app)
 #db = SQLAlchemy(app)
 
 app.secret_key = 'jpfsop0495nfuianrgp019283iuern0n87unrnub098346ounb'
